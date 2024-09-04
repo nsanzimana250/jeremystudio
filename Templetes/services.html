@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<!-- index-sp-layout209:19-->
+<head>
+
+<!-- Meta Tags -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="LearnPress | Education & Courses HTML Template" />
+<meta name="keywords" content="academy, course, education, education html theme, #, learning," />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<!-- Page Title -->
+<title>::Jeremystidio::</title>
+
+
+
+<!-- Favicon and Touch Icons -->
+<link href="{% static 'images/ORG/log/log.png' %}" rel="shortcut icon" type="image/png">
+<link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+<link href="{% static 'images/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72">
+<link href="{% static 'images/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114">
+<link href="{% static 'images/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144">
+
+<!-- Stylesheet -->
+<link href="{% static 'css/esdras.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/css-plugin-collections.css' %}" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="{% static 'css/menuzord-skins/menuzord-rounded-boxed.css' %}" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="{% static 'css/style-main.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="{% static 'css/preloader.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="{% static 'css/custom-bootstrap-margin-padding.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+<!-- Revolution Slider 5.x CSS settings -->
+<link  href="{% static 'js/revolution-slider/css/settings.css' %}" rel="stylesheet" type="text/css"/>
+<link  href="{% static 'js/revolution-slider/css/layers.css' %}" rel="stylesheet" type="text/css"/>
+<link  href="{% static 'js/revolution-slider/css/navigation.css' %}" rel="stylesheet" type="text/css"/>
+
+<!-- CSS | Theme Color -->
+<link href="{% static 'css/colors/theme-skin-color-set-1.css' %}" rel="stylesheet" type="text/css">
+
+<!-- external javascripts -->
+<script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- JS | jquery plugin collection for this theme -->
+<script src="{% static 'js/jquery-plugin-collection.js' %}"></script>
+
+<!-- Revolution Slider 5.x SCRIPTS -->
+<script src="{% static 'js/revolution-slider/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'js/revolution-slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+<style>
+.service-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.logo-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 60vh; /* Responsive height */
+    overflow: hidden;
+}
+
+.logo-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes slideShow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.logo-container img:nth-child(1) {
+    animation: slideShow 20s infinite;
+    animation-delay: 0s;
+}
+.logo-container img:nth-child(2) {
+    animation: slideShow 20s infinite;
+    animation-delay: 6s;
+}
+.logo-container img:nth-child(3) {
+    animation: slideShow 20s infinite;
+    animation-delay: 12s;
+}
+.logo-container img:nth-child(4) {
+    animation: slideShow 20s infinite;
+    animation-delay: 18s;
+}
+.logo-container img:nth-child(5) {
+    animation: slideShow 20s infinite;
+    animation-delay: 0s;
+}
+.description-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    background-color: #ffffff;
+    margin-left: 3%;
+}
+
+</style>
+</head>
+
+
+<body class="">
+<div id="wrapper" class="clearfix">
+
+
+  <!-- preloader -->
+  <div id="preloader">
+        <div id="spinner">
+          <img alt="" src="{% static 'images/preloaders/8.gif' %}">
+        </div>
+        <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+      </div>
+  </div>
+  {% include 'include_page/header.html' %}
+  
+<!-- navigation part  -->
+{% include 'include_page/navigation.html' %}
+
+<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'images/ORG/log/innerheader.jpg' %}">
+  <div class="container pt-70 pb-20">
+    <!-- Section Content -->
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="title text-white text-center">My Service</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="head" style="display: flex; justify-content: center;
+align-items: center; flex-direction: column; flex-wrap: wrap; margin-top: 3%;">
+  <h2 style="cursor: pointer;color: rgb(2, 2, 73);" >Log Design</h2>
+  <p>Log Design creates a visual symbol, like a logo, to represent a brand.<br> It involves understanding the brand and refining ideas.</p>
+</div>
+
+<!-- Start Service -->
+<section class="service-section">
+    <!-- First div: Animated logos -->
+    <div class="logo-container">
+        <img src="{% static 'log/LogoDesign5.jpg' %}" alt="Logo 1" class="logo-image">
+        <img src="{% static 'log/LogoDesign2.webp' %}" alt="Logo 2" class="logo-image">
+        <img src="{% static 'log/LogoDesign.jpg' %}" alt="Logo 3" class="logo-image">
+        <img src="{% static 'log/LogoDesign4.jpg' %}" alt="Logo 4" class="logo-image">
+        <img src="{% static 'log/LogoDesign5.jpg' %}" alt="Logo 5" class="logo-image">
+    </div>
+
+    <!-- Second div: Description of logos -->
+    <div class="description-container">
+        <p>
+            "Discover the power of our meticulously crafted logs, designed to seamlessly blend innovation with durability. 
+            Each log is engineered with precision to ensure optimal performance and reliability, making them the ideal 
+            choice for those who demand excellence. With a focus on quality and cutting-edge technology, our logs promise 
+            unmatched efficiency and longevity, ensuring your investment stands the test of time. Experience the difference 
+            today and elevate your standards with our exceptional products."
+        </p>
+    </div>
+</section>
+
+
+<div class="head" style="display: flex; justify-content: center;margin-top: 3%;
+align-items: center; flex-direction: column; flex-wrap: wrap;">
+  <h2 style="cursor: pointer;color: rgb(2, 2, 73);" >Brand Identity Design</h2>
+  <p>Brand Identity Design is about creating a visual and emotional image for
+     a brand. It includes logos, colors, fonts, and styles<br> that represent the brand’s personality and make it recognizable..</p>
+</div>
+
+<!-- Start Service -->
+<section class="service-section">
+    <!-- First div: Animated logos -->
+    <div class="logo-container">
+        <img src="{% static 'Brand_Identity_Design/BrandIdentityDesign.jpeg' %}" alt="Logo 1" class="logo-image">
+        <img src="{% static 'Brand_Identity_Design/BrandIdentityDesign1.jpg' %}" alt="Logo 2" class="logo-image">
+        <img src="{% static 'Brand_Identity_Design/BrandIdentityDesign2.jpg' %}" alt="Logo 3" class="logo-image">
+        <img src="{% static 'Brand_Identity_Design/BrandIdentityDesign3.jpg' %}" alt="Logo 4" class="logo-image">
+        <img src="{% static 'Brand_Identity_Design/BrandIdentityDesign4_.jpg' %}" alt="Logo 5" class="logo-image">
+    </div>
+
+    <!-- Second div: Description of logos -->
+    <div class="description-container">
+        <p>
+          "Brand Identity Design works by developing a consistent visual and emotional 
+          representation of a brand. It starts with understanding the brand’s values and 
+          goals, then creates elements like logos, color schemes, typography, and design
+           styles that reflect its personality. These elements are used across various platforms
+            and materials, such as websites, packaging, and advertising, to
+           build a cohesive and recognizable image that helps the brand stand out and connect with its audience."
+        </p>
+    </div>
+</section>
+
+
+<div class="head" style="display: flex; justify-content: center;margin-top: 3%;
+align-items: center; flex-direction: column; flex-wrap: wrap;">
+  <h2 style="cursor: pointer;color: rgb(2, 2, 73);" >Web and App Design</h2>
+  <p>Web and App Design is about making websites and apps look good and work well.
+     It involves arranging elements, choosing colors <br>and fonts, and ensuring everything is easy to use on different devices.</p>
+</div>
+
+<!-- Start Service -->
+<section class="service-section">
+    <!-- First div: Animated logos -->
+    <div class="logo-container">
+        <img src="{% static 'WebandAppDesign/WebandAppDesign4.png' %}" alt="Logo 1" class="logo-image">
+        <img src="{% static 'WebandAppDesign/WebandAppDesign1.png' %}" alt="Logo 2" class="logo-image">
+        <img src="{% static 'WebandAppDesign/WebandAppDesign2.png' %}" alt="Logo 3" class="logo-image">
+        <img src="{% static 'WebandAppDesign/WebandAppDesign4.png' %}" alt="Logo 4" class="logo-image">
+        <img src="{% static 'WebandAppDesign/WebandAppDesign3.png' %}" alt="Logo 5" class="logo-image">
+    </div>
+
+    <!-- Second div: Description of logos -->
+    <div class="description-container">
+        <p>
+          "Web and App Design involves creating the layout and visual style of websites and mobile applications. It includes arranging 
+          content, choosing colors and fonts, and ensuring the design is user-friendly.
+           The aim is to make sure everything looks attractive, works smoothly, and provides
+            a great experience on various devices and screen sizes."
+        </p>
+    </div>
+</section>
+
+
+
+<div class="head" style="display: flex; justify-content: center;margin-top: 3%;
+align-items: center; flex-direction: column; flex-wrap: wrap;">
+  <h2 style="cursor: pointer;color: rgb(2, 2, 73);" >Animation Design</h2>
+  <p>Animation Design is the process of creating moving visuals to make stories, <br>characters, or ideas come alive and engage viewers</p>
+</div>
+
+<!-- Start Service -->
+<section class="service-section">
+    <!-- First div: Animated logos -->
+    <div class="logo-container">
+        <img src="{% static 'animation/animation.gif' %}" alt="Logo 1" class="logo-image">
+        <img src="{% static 'animation/animation2.gif' %}" alt="Logo 2" class="logo-image">
+        <img src="{% static 'animation/animation6.gif' %}" alt="Logo 3" class="logo-image">
+        <img src="{% static 'animation/animation3.gif' %}" alt="Logo 4" class="logo-image">
+        <img src="{% static 'animation/animation4.gif' %}" alt="Logo 5" class="logo-image">
+    </div>
+
+    <!-- Second div: Description of logos -->
+    <div class="description-container">
+        <p>
+          "Animation Design involves creating moving visuals to tell a story, convey information,
+           or enhance user experiences. It includes designing characters, scenes, and effects that
+            move in a sequence, using techniques like 2D or 3D animation. The process involves planning 
+            the animation flow, creating individual frames or using software to generate smooth motion, and a
+            dding elements like sound. The goal is to 
+          engage and entertain viewers or users by bringing static images or ideas to life through motion."
+        </p>
+    </div>
+</section>
+  
+
+
+ <!-- end sevices -->
+{% include 'include_page/footer.html' %}
+</div>
+<script src="{% static 'js/custom.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.actions.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.carousel.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.migration.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.navigation.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.parallax.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.video.min.js' %}"></script>
+</body>
+
+<!-- index-sp-layout209:19-->
+</html>

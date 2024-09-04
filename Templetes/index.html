@@ -1,0 +1,779 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<!-- index-sp-layout209:19-->
+<head>
+
+<!-- Meta Tags -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="LearnPress | Education & Courses HTML Template" />
+<meta name="keywords" content="academy, course, education, education html theme, #, learning," />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<!-- Page Title -->
+<title>::Jeremystidio::</title>
+
+
+<!-- Favicon and Touch Icons -->
+<link href="{% static 'images/ORG/log/log.png' %}" rel="shortcut icon" type="image/png">
+<link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+<link href="{% static 'images/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72">
+<link href="{% static 'images/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114">
+<link href="{% static 'images/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144">
+
+<!-- Stylesheet -->
+<link href="{% static 'css/esdras.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/css-plugin-collections.css' %}" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="{% static 'css/menuzord-skins/menuzord-rounded-boxed.css' %}" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="{% static 'css/style-main.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Preloader Styles -->
+<link href="{% static 'css/preloader.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="{% static 'css/custom-bootstrap-margin-padding.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Responsive media queries -->
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css">
+<!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+<!-- Revolution Slider 5.x CSS settings -->
+<link  href="{% static 'js/revolution-slider/css/settings.css' %}" rel="stylesheet" type="text/css"/>
+<link  href="{% static 'js/revolution-slider/css/layers.css' %}" rel="stylesheet" type="text/css"/>
+<link  href="{% static 'js/revolution-slider/css/navigation.css' %}" rel="stylesheet" type="text/css"/>
+
+<!-- CSS | Theme Color -->
+<link href="{% static 'css/colors/theme-skin-color-set-1.css' %}" rel="stylesheet" type="text/css">
+
+<!-- external javascripts -->
+<script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- JS | jquery plugin collection for this theme -->
+<script src="{% static 'js/jquery-plugin-collection.js' %}"></script>
+
+<!-- Revolution Slider 5.x SCRIPTS -->
+<script src="{% static 'js/revolution-slider/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'js/revolution-slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<style>
+*{
+  scroll-behavior: smooth;
+}
+  .background-section {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(131, 129, 129, 0.575), rgba(131, 129, 129, 0.555)), 
+    url('{% static "images/ORG/log/baner2.png" %}');
+    /* background-size: cover; Ensures the image covers the whole section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex; /* Optional: Flexbox for content alignment */
+    justify-content: center; /* Optional: Center content horizontally */
+    align-items: center; /* Optional: Center content vertically */
+  }
+  
+  .map-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 60%;
+    border: 0;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+.footer-content {
+  border: 2px solid white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+</style>
+</head>
+<body class="">
+<div id="wrapper" class="clearfix">
+  <!-- preloader -->
+  <div id="preloader">
+    <div id="spinner">
+      <img alt="" src="{% static 'images/preloaders/8.gif' %}">
+    </div>
+    <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+  </div>
+  <div  class="headers" >
+  <!-- Header -->
+  {% include 'include_page/header.html' %}
+    <!-- navigation part  -->
+     {% include 'include_page/navigation.html' %}
+  </div>
+
+  <section class="background-section" style="background-color: black; color: white; text-align: center; padding: 50px;">
+    <section class="header-section">
+        <div class="header-overlay">
+            <div class="header-content" style="animation: fadeIn 2s;">
+                <h1 style="color: white; font-size: 35px; animation: fadeIn 2s 1s;">Welcome to Our Studio</h1>
+                <p style="animation: slideUp 1.5s 1s;">Capturing Moments, Creating Memories</p>
+                <address style="animation: slideUp 1.5s 1.5s;">
+                    <strong>Contact Us:</strong><br>
+                    Jeremy Studio, KIGALI, RWANDA, KG 31<br>
+                    Phone: (+250)786-583-670<br>
+                    Email: studiojeremy2@gmail.com
+                </address>
+                <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 20px; color: white; background-color: #04386f; padding: 10px 20px; text-decoration: none; border-radius: 5px; animation: bounce 2s infinite 2s;">Thank you for your presence.</a>
+            </div>
+        </div>
+    </section>
+</section>
+  <div class="main-content">
+   
+
+    <!-- Section: Sevices -->
+    <section>
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-sm-6 col-md-4" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
+              <img class="img-fullwidth "   src="{% static 'images/ORG/18.png' %}" alt="">
+              <div class="bg-silver-light border-1px p-20 pt-0 pb-30 mb-sm-180">
+                   
+                    <h4 class=" letter-space-1 mt-10">Conscious<span class="text-theme-color-2"> portrait.</span></h4>
+                <p>“A photographic portrait is a picture of someone who knows he is being photographed.”</p>
+                <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-40 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
+              <img class="img-fullwidth" src="{% static 'images/ORG/19.png' %}" alt="">
+              <div class="bg-silver-light border-1px p-20 pt-0 pb-30 mb-sm-180">
+                    <h4 class="letter-space-1 mt-10">Hope & <span class="text-theme-color-2">Despair</span></h4>
+                <p>“Black and white are the colors of photography. To me, they symbolize the alternatives of hope and despair to which mankind is forever subjected.”</p>
+                <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
+              </div>
+            </div>
+            <div></div>
+            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-0 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
+              <img class="img-fullwidth"  src="{% static 'images/ORG/21.png' %}" alt="">
+              <div class="bg-silver-light border-1px p-20 pt-0 pb-30">
+                  <h4 class=" letter-space-1 mt-10">Seeing<span class="text-theme-color-2">Anew</span></h4>
+                <p>“The camera is an instrument that teaches people how to see without a camera.”</p>
+                <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Section: About -->
+    <section >
+      <div class="container mt-0 pb-70 pt-0" id="about">
+        <div class="section-content">
+          <div class="row mt-10">
+            <div class="col-sm-12 col-md-6 mb-sm-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <h3 class="text-uppercase mt-0">Learn More <span class="text-theme-color-2">About Us </span></h3>
+              <p class="lead">
+
+                ________________________________________<br>
+                Welcome to  <img src="{% static 'images/ORG/log/log.png' %}" alt="Logo" style="height: 50px; width:100px; object-fit: cover; margin-right: 20px;"> , where capturing life's most precious moments is my passion. With a keen eye for detail and a creative approach, I aim to transform ordinary scenes into extraordinary memories. Whether it's a wedding, a family portrait, or a stunning landscape, I believe that every photograph tells a story, and my goal is to convey that story in the most captivating way possible.
+                </p>
+              <p class="mb-15">
+                ________________________________________<br>
+                Photography, to me, is about more than just taking pictures; it's about capturing the essence of a moment and preserving it for a lifetime. My work reflects a deep appreciation for the art of storytelling, where emotions, details, and the environment all come together to create an image that resonates.
+              </p>
+              <p class="mb-10">
+                ________________________________________<br>
+                In addition to my love for capturing beautiful images, I am dedicated to providing a personalized experience for each of my clients. I take the time to understand your vision and work closely with you to ensure that the final product exceeds your expectations.
+                </p>
+                <p class="mb-10">
+                  ________________________________________<br>
+                  In addition to my love for capturing beautiful images, I am dedicated to providing a personalized experience for each of my clients. I take the time to understand your vision and work closely with you to ensure that the final product exceeds your expectations.
+                  </p>
+                  
+            </div>
+            <div class="col-sm-12 col-md-6 mt-0 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+
+              <div class="video-popup">                
+                <a href="https://www.youtube.com/watch?v=9MzYyKTiutc" data-lightbox-gallery="youtube-video" title="Video">
+                  <img alt="" src="{% static 'images/ORG/log/5.jpg' %}" class="img-responsive img-fullwidth mt-10 ml-30 ml-xs-0 ml-sm-0">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Features -->
+  <section class="bg-lighter">
+    <div class="container">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="text-uppercase title line-bottom">Our <span class="text-black font-weight-300">Features</span></h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="icon-box p-0 mb-30">
+                 <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip" href="#">
+                  <i class="pe-7s-scissors text-white"></i>
+                 </a>
+                 <div class="icon-box-details ml-sm-0">
+                  <h5 class="icon-box-title mt-15 text-uppercase letter-space-2 mb-0">Personalized Composition</h5>
+                  <p class="text-gray">Unique framing tailored to client needs.</p>
+                 </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="icon-box p-0 mb-30">
+                 <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip" href="#">
+                  <i class="pe-7s-pen text-white"></i>
+                 </a>
+                 <div class="icon-box-details ml-sm-0">
+                  <h5 class="icon-box-title mt-15 text-uppercase letter-space-2 mb-0">Mastery of Lighting</h5>
+                  <p class="text-gray">Expert lighting creates perfect photographic moods.</p>
+                 </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="icon-box p-0 mb-30">
+                 <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip" href="#">
+                  <i class="pe-7s-tools text-white"></i>
+                 </a>
+                 <div class="icon-box-details ml-sm-0">
+                  <h5 class="icon-box-title mt-15 text-uppercase letter-space-2 mb-0">Attention to Detail and Texture</h5>
+                  <p class="text-gray">Highlight textures that make subjects stand out.</p>
+                 </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="icon-box p-0 mb-30">
+                 <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip" href="#">
+                  <i class="pe-7s-phone text-white"></i>
+                 </a>
+                 <div class="icon-box-details ml-sm-0">
+                  <h5 class="icon-box-title mt-15 text-uppercase letter-space-2 mb-0">Creative Storytelling</h5>
+                  <p class="text-gray">Photos that tell compelling, emotional stories.</p>
+                 </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="icon-box p-0 mb-30">
+                 <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-sm pull-left sm-pull-none flip" href="#">
+                  <i class="pe-7s-vector text-white"></i>
+                 </a>
+                 <div class="icon-box-details ml-sm-0">
+                  <h5 class="icon-box-title mt-15 text-uppercase letter-space-2 mb-0">Professional Editing and Post-Processing:</h5>
+                  <p class="text-gray">Polished images through careful, creative editing.</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6"> 
+            <h3 class="text-uppercase title line-bottom">Our <span class="text-black font-weight-300">Working Skill</span></h3>
+            <div class="progressbar-container">
+              <div class="progress-item mb-30">
+                <div class="progress-title">
+                  <h5 class="text-uppercase letter-space-2">Technical</h5>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-theme-colored" data-percent="85"></div>
+                </div>
+              </div>
+              <div class="progress-item mb-30">
+                <div class="progress-title">
+                  <h5 class="text-uppercase letter-space-2">Creative</h5>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-theme-colored" data-percent="80"></div>
+                </div>
+              </div>
+              <div class="progress-item mb-30">
+                <div class="progress-title">
+                  <h5 class="text-uppercase letter-space-2">Detail-oriented</h5>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-theme-colored" data-percent="95"></div>
+                </div>
+              </div>
+              <div class="progress-item mb-30">
+                <div class="progress-title">
+                  <h5 class="text-uppercase letter-space-2">Communicative</h5>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-theme-colored" data-percent="75"></div>
+                </div>
+              </div>
+              <div class="progress-item mb-30">
+                <div class="progress-title">
+                  <h5 class="text-uppercase letter-space-2">Editing</h5>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-theme-colored" data-percent="90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+   <!-- Divider: why choose us 1 -->
+
+    <section class="divider parallax" data-bg-img="{% static 'images/ORG/log/18.jpg' %}" data-parallax-ratio="0.7">
+      <div class="container pt-0 pb-0">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-4">
+            <div class="bg-white-transparent-9 pb-10 p-40">
+              <h2 class="mb-20 mt-30 line-height-1 text-center text-uppercase">Reasons to  <span class="text-theme-color-2"> Choose Us</span></h2>
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
+                      <a class="icon pull-left sm-pull-none flip" href="#">
+                        <!-- icone of ecperience  -->
+                      <i class="fa fa-building text-theme-colored font-50"></i>        
+                      </a>
+                      <div class="ml-70 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5">Creative Vision:</h4>
+                        <p>I offer a unique perspective, capturing moments with creativity and passion to create visually striking and memorable images.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
+                      <a class="icon pull-left sm-pull-none flip" href="#">
+                      <i class="fa fa-users text-theme-colored font-50"></i>
+                      </a>
+                      <div class="ml-70 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5">Personalized Experience:</h4>
+                        <p>I tailor each session to your needs, ensuring a comfortable, enjoyable experience that results in stunning, personalized photographs.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="icon-box p-15 mb-30 mb-sm-0 mt-sm-0">
+                      <a class="icon pull-left sm-pull-none flip" href="#">
+                      <i class="fa fa-book text-theme-colored font-50"></i>
+                      </a>
+                      <div class="ml-70 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5">Attention to Detail:</h4>
+                        <p>Meticulous attention to detail ensures every photo captures the essence of the moment, highlighting emotions and intricate beauty.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="icon-box p-15 mb-30 mb-sm-0 mt-sm-0">
+                      <a class="icon pull-left sm-pull-none flip" href="#">
+                        <div id="product"></div>
+                      <i class="fa fa-money text-theme-colored font-50"></i>
+                      </a>
+                      <div class="ml-70 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5">Professional Expertise:</h4>
+                        <p>With years of experience and technical skill, I consistently deliver high-quality, professional images that exceed expectations and preserve memories.</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+    <!-- gallery start here -->
+     
+     <section style="font-family: Arial, sans-serif; text-align: center;"  >
+      
+
+        <h2 style="color: #333;  ">Gallery Image </h2>
+    
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+
+
+          <div class="image-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+              <img src="{% static 'images/ORG/log/11.jpg' %}" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onclick="toggleContent(this)">
+              <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+                <h4 style="font-weight: bold; color: white;">MUNYAKANZI NSHIMIYE </h4>
+                <p style="font-weight: bold;" > Photography has no rules, it is not a sport.</p>
+                <data style="font-weight: bold;" >august,08,2024</data>
+                <div style="margin-top: 20px;">
+                  <!-- Download Icon -->
+                  <a download href="{% static 'images/ORG/log/11.jpg' %}">
+                      <i class="fa-solid fa-download" style="color: blue; font-size: 24px; padding: 10px;"></i>
+                  </a>
+                  <!-- View Icon -->
+                  <a  href="{% static 'images/ORG/log/11.jpg' %}">
+                      <i class="fa-solid fa-eye" style="color: green; font-size: 24px; padding: 10px;"></i>
+                  </a>   
+              </div>
+              </div>
+          </div> 
+
+          <div class="image-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+            <img src="{% static 'images/ORG/log/9.jpg' %}" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onclick="toggleContent(this)">
+            <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+              <h4 style="font-weight: bold; color: white;">NSANZIMANA Edsras</h4>
+              <p style="font-weight: bold;" > In photography there is a reality so subtle that it becomes more real than reality..</p>
+              <data style="font-weight: bold;" >august,08,2024</data>
+              <div style="margin-top: 20px;">
+                <!-- Download Icon -->
+                <a download href="{% static 'images/ORG/log/9.jpg' %}">
+                    <i class="fa-solid fa-download" style="color: blue; font-size: 24px; padding: 10px;"></i>
+                </a>
+                <!-- View Icon -->
+                <a  href="{% static 'images/ORG/log/9.jpg' %}">
+                    <i class="fa-solid fa-eye" style="color: green; font-size: 24px; padding: 10px;"></i>
+                </a>   
+            </div>
+            </div>
+        </div> 
+
+        <div class="image-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+          <img src="{% static 'images/ORG/log/18.jpg' %}" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onclick="toggleContent(this)">
+          <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+            <h4 style="font-weight: bold; color: white;">SHE IS MY LOVELY SISTER</h4>
+            <p style="font-weight: bold;" > Below are the sweetest and most beautiful words you can choose from to brighten her day and change her mood from gloom to bloom. Our love is better than a ...</p>
+            <data style="font-weight: bold;" >august,08,2024</data>
+            <div style="margin-top: 20px;">
+              <!-- Download Icon -->
+              <a download href="{% static 'images/ORG/log/18.jpg' %}">
+                  <i class="fa-solid fa-download" style="color: blue; font-size: 24px; padding: 10px;"></i>
+              </a>
+              <!-- View Icon -->
+              <a href="{% static 'images/ORG/log/18.jpg' %}">
+                  <i class="fa-solid fa-eye" style="color: green; font-size: 24px; padding: 10px;"></i>
+              </a>   
+          </div>
+          </div>
+      </div> 
+
+      <div class="image-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+        <img src="{% static 'images/ORG/log/20.jpg' %}" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onclick="toggleContent(this)">
+        <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+          <h4 style="font-weight: bold; color: white;"> MY LOVELY FAMILY</h4>
+          <p style="font-weight: bold;" > Rejoice with your family in the beautiful land of life." - Albert Einstein; "For there is no friend like a sister in calm or stormy weather; To cheer one on ...</p>
+          <data style="font-weight: bold;" >august,08,2024</data>
+          <div style="margin-top: 20px;">
+            <!-- Download Icon -->
+            <a download href="{% static 'images/ORG/log/20.jpg' %}">
+                <i class="fa-solid fa-download" style="color: blue; font-size: 24px; padding: 10px;"></i>
+            </a>
+            <!-- View Icon -->
+            <a href="{% static 'images/ORG/log/20.jpg' %}">
+                <i class="fa-solid fa-eye" style="color: green; font-size: 24px; padding: 10px;"></i>
+            </a>   
+        </div>
+        </div>
+    </div> 
+
+    <div class="image-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+      <img src="{% static 'images/ORG/log/1.jpg' %}" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onclick="toggleContent(this)">
+      <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+        <h4 style="font-weight: bold; color: white;"> FRIEND OF MINE</h4>
+        <p style="font-weight: bold;" >Sisters are like flowers in the garden of life, blooming with love and nurturing each other's growth.” – Unknown.</p>
+        <data style="font-weight: bold;" >august,08,2024</data>
+        <div style="margin-top: 20px;">
+          <!-- Download Icon -->
+          <a download href="{% static 'images/ORG/log/1.jpg' %}">
+              <i class="fa-solid fa-download" style="color: blue; font-size: 24px; padding: 10px;"></i>
+          </a>
+          <!-- View Icon -->
+          <a href="{% static 'images/ORG/log/1.jpg' %}">
+              <i class="fa-solid fa-eye" style="color: green; font-size: 24px; padding: 10px;"></i>
+          </a>   
+      </div>
+      </div>
+  </div> 
+
+  <div class="image-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+    <img src="{% static 'images/ORG/log/6.jpg' %}" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onclick="toggleContent(this)">
+    <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+      <h4 style="font-weight: bold; color: white;"> FRIEND OF MINE</h4>
+      <p style="font-weight: bold;" >Dear bro, if you ever feel low, then remember that my love for you is permanent. ...</p>
+      <data style="font-weight: bold;" >august,08,2024</data>
+      <div style="margin-top: 20px;">
+        <!-- Download Icon -->
+        <a download href="{% static 'images/ORG/log/6.jpg' %}">
+            <i class="fa-solid fa-download" style="color: blue; font-size: 24px; padding: 10px;"></i>
+        </a>
+        <!-- View Icon -->
+        <a  href="{% static 'images/ORG/log/6.jpg' %}">
+            <i class="fa-solid fa-eye" style="color: green; font-size: 24px; padding: 10px;"></i>
+        </a>   
+    </div>
+    </div>
+</div> 
+
+
+      </div> 
+      <div style="margin-bottom: 10px;">
+        <a href="{% url 'image' %}" style="color: blue; text-decoration: none; font-size: 18px; padding: 10px; color:rgb(255, 255, 255); background: rgba(12, 12, 77, 0.661); border: 1px solid rgb(59, 115, 197); border-radius: 5px;">View More</a>
+              <!-- Repeat for more images -->
+          </div>
+          
+    </div>
+      
+  
+      <script>
+          document.querySelectorAll('.image-container img').forEach(img => {
+              img.addEventListener('mouseover', function() {
+                  this.style.transform = 'scale(1.1)';
+              });
+              img.addEventListener('mouseout', function() {
+                  this.style.transform = 'scale(1)';
+              });
+          });
+  
+          function toggleContent(img) {
+              const content = img.nextElementSibling;
+              if (content.style.display === 'block') {
+                  content.style.display = 'none';
+              } else {
+                  content.style.display = 'block';
+              }
+          }
+      </script>
+  
+    
+     </section>
+
+
+     <!-- gallery ends here -->
+
+
+     <section style="font-family: Arial, sans-serif; text-align: center;">
+      <h2 style="color: #333;">Video Gallery</h2>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="video-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+
+            <video src="{% static 'images/vid/short1.mp4' %}" style="width: 100%; height: 100%; object-fit: cover;" controls  loop  muted poster="{% static 'images/ORG/log/log.png' %}" onclick="toggleContent(this)"></video>
+            <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+              <h4 style="font-weight: bold; color: white;">esdras</h4>
+              <p style="font-weight: bold;" > Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+              <data style="font-weight: bold;" >august,08,2024</data>
+             
+            </div>
+        </div>
+
+        <div class="video-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+
+          <video src="{% static 'images/vid/short2.mp4' %}" style="width: 100%; height: 100%; object-fit: cover;" controls autoplay loop  muted poster="{% static 'images/ORG/log/log.png' %}" onclick="toggleContent(this)"></video>
+          <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+            <h4 style="font-weight: bold; color: white;">esdras</h4>
+            <p style="font-weight: bold;" > Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <data style="font-weight: bold;" >august,08,2024</data>
+           
+          </div>
+      </div>
+
+      <div class="video-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+
+        <video src="{% static 'images/vid/short3.mp4' %}" style="width: 100%; height: 100%; object-fit: cover;" controls  loop  muted poster="{% static 'images/ORG/log/log.png' %}"  onclick="toggleContent(this)"></video>
+        <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+          <h4 style="font-weight: bold; color: white;">esdras</h4>
+          <p style="font-weight: bold;" > Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <data style="font-weight: bold;" >august,08,2024</data>
+         
+        </div>
+        </div>
+
+        <div class="video-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+
+          <video src="{% static 'images/vid/short4.mp4' %}" style="width: 100%; height: 100%; object-fit: cover;" controls  loop  muted poster="{% static 'images/ORG/log/log.png' %}"  onclick="toggleContent(this)"></video>
+          <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+            <h4 style="font-weight: bold; color: white;">esdras</h4>
+            <p style="font-weight: bold;" > Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <data style="font-weight: bold;" >august,08,2024</data>
+           
+          </div>
+      </div>
+
+      <div class="video-container" style="margin: 10px; border: 1px solid #ccc; width: 300px; height: 300px; overflow: hidden; position: relative;">
+
+        <video src="{% static 'images/vid/short4.mp4' %}" style="width: 100%; height: 100%; object-fit: cover;" controls autoplay loop  muted poster="{% static 'images/ORG/log/log.png' %}"  onclick="toggleContent(this)"></video>
+        <div class="content" style="display: none; background-color: rgba(0, 0, 0, 0.5); color: white; position: absolute; bottom: 0; width: 100%; text-align: left; padding: 10px;">
+          <h4 style="font-weight: bold; color: white;">esdras</h4>
+          <p style="font-weight: bold;" > Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <data style="font-weight: bold;" >august,08,2024</data>
+         
+        </div>
+    </div>
+      
+
+
+      
+        <!-- Repeat for more videos -->
+    </div>
+    <div style="margin-bottom: 10px;">
+      <a href="{% url 'video' %}" style="color: blue; text-decoration: none; font-size: 18px; padding: 10px; color:rgb(255, 255, 255); background: rgba(12, 12, 77, 0.661); border: 1px solid rgb(59, 115, 197); border-radius: 5px;">View More</a>
+              <!-- Repeat for more images -->
+    </div>
+
+    <script>
+        function toggleContent(video) {
+            const content = video.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        }
+    </script>
+     </section>
+<!-- Section: Contact -->
+<h2 style="color: #333; text-align: center;" id="contact">Contact Us</h2>
+<section id="contact" class="bg-lighter">
+  <div class="container pt-70 pb-40">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-15">
+          <h3 class="line-bottom text-uppercase mt-0 mb-30 mt-sm-20">Send Us a Message</h3>
+
+          <!-- Display success messages -->
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-success" role="alert">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+
+          <!-- Contact Form -->
+          <form id="contact_form" name="contact_form" action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group mb-30">
+                  <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30">
+                  <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group mb-30">
+                  <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30">
+                  <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-15">
+              <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message" required></textarea>
+            </div>
+            <div class="form-group mb-30">
+              <input name="form_botcheck" class="form-control" type="hidden" value="">
+              <button type="submit" class="btn btn-flat btn-theme-colored text-uppercase mt-20 mb-sm-30 border-left-theme-color-2-4px">Send your message</button>
+              <button type="reset" class="btn btn-flat btn-theme-colored text-uppercase mt-20 mb-sm-30 border-left-theme-color-2-4px">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <h2 style="text-align: center;" >My Location</h2>
+    <div style="width: 100%; max-width: 90%; height: 600px; margin: auto;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.2434728257226!2d30.10659917508635!3d-1.914100736634796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca12648976e27%3A0x6b0ef9940aa8d5db!2s58%20KG%2031%20Ave%2C%20Kigali!5e1!3m2!1sen!2srw!4v1723719478924!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+  <!-- end main-content -->
+  {% include 'include_page/footer.html' %}
+ 
+  
+
+       
+</div>
+<!-- end wrapper --> 
+<!-- JS | Custom script for all pages --> 
+<script src="{% static 'js/custom.js' %}"></script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+      (Load Extensions only on Local File Systems ! 
+       The following part can be removed on Server for On Demand Loading) --> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.actions.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.carousel.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.migration.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.navigation.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.parallax.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.video.min.js' %}"></script>
+</body>
+
+<!-- index-sp-layout209:19-->
+</html>

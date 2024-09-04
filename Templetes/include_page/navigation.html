@@ -1,0 +1,31 @@
+{% load static %}
+<section style="margin: 0; width:100%; font-family: Arial, sans-serif;">
+    <nav>
+      <div>
+          <a href="{% url 'index' %}">
+              <img src="{% static 'images/ORG/log/log.png' %}" alt="Logo" style="height: 50px; width:100px; object-fit: cover; margin-right: 20px;">
+          </a>
+          <i class="fa-solid fa-bars menu-icon" id="menu-icon"></i>
+          <ul id="nav-list">
+              <li><a href="{% url 'index' %}" class="active">Home</a></li>
+              <li><a href="{% url 'index' %}#about">About</a></li>
+              <li><a href="{% url 'services' %}">services</a></li>
+              <li><a href="{% url 'mycustomer' %}"> Customer</a></li>
+              <li><a href="{% url 'image' %}" >Gallery</a></li>
+              <li><a href="{% url 'index' %}#contact">Contact </a></li>
+             
+          </ul>
+      </div>
+  </nav>
+  <script>
+      // JavaScript to toggle menu
+      const menuIcon = document.getElementById('menu-icon');
+      const navList = document.getElementById('nav-list');
+
+      menuIcon.addEventListener('click', () => {
+          navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+          menuIcon.classList.toggle('fa-bars');
+          menuIcon.classList.toggle('fa-x');
+      });
+  </script>
+</section>
